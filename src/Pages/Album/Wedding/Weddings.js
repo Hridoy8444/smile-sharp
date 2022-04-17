@@ -12,7 +12,7 @@ const Weddings = () => {
     }, []);
 
     return (
-        <div>
+        <div id='weddings'>
             <h2 className='text-primary text-center'>Wedding Photo</h2>
             <div className='row mx-auto gy-3   '>
                 {

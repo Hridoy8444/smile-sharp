@@ -8,6 +8,9 @@ import Register from './Login/Register/Register';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Album from './Pages/Album/Album/Album';
+import SuccessFull from './Pages/CheckOut/SuccessFull';
+import Blogs from './Pages/Blogs/Blogs';
+
 
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
         <Route path='/checkout' element={<RequireAuth>
           <CheckOut></CheckOut>
         </RequireAuth>}></Route>
+       <Route path='/successfull' element={<SuccessFull></SuccessFull>}></Route>
+       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>

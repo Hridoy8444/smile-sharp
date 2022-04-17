@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import banner1 from '../../../Images/Banner/banner1.jpg'
 import banner2 from '../../../Images/Banner/banner2.jpg'
@@ -21,8 +22,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Seminar Photography</h3>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,8 +34,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Wedding Photography</h3>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -45,10 +46,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
+                    <h3>Events Photography</h3>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
