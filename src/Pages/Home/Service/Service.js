@@ -19,7 +19,7 @@ const Service = ({ service }) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button onClick={handleToCheckOut} variant="primary">Go somewhere</Button>
+                    <Button onClick={handleToCheckOut} variant="primary">Go CheckOut</Button>
                 </Card.Body>
             </Card>
         </div>

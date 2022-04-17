@@ -7,6 +7,7 @@ import Login from './Login/Login/Login';
 import Register from './Login/Register/Register';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import CheckOut from './Pages/CheckOut/CheckOut';
+import Album from './Pages/Album/Album/Album';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='checkout' element={<RequireAuth>
+        <Route path='/album' element={<Album></Album>}></Route>
+        <Route path='/checkout' element={<RequireAuth>
           <CheckOut></CheckOut>
         </RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

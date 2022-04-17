@@ -21,11 +21,11 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [signInWithGoogle] = useSignInWithGoogle(auth)
     const [signInWithFacebook] = useSignInWithFacebook(auth);
 
-    const [sendEmailVerification] = useSendEmailVerification(auth);
+    
 
 
    
@@ -39,7 +39,7 @@ const Register = () => {
         setConfirmPassword(event.target.value);
     }
     if(user){
-        navigate('/');
+        navigate('/checkout');
     }
     const handleToSubmit = event => {
         event.preventDefault();
@@ -47,8 +47,10 @@ const Register = () => {
             setError('Your Password are not match');
             return;
         }
+        
         createUserWithEmailAndPassword(email, password);
-         sendEmailVerification(auth);
+        if(createUserWithEmailAndPassword){}
+        
          alert('send email')
     }
     const navigateToLogin = () => {

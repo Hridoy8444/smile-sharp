@@ -40,9 +40,9 @@ const Login = () => {
 
         signInWithEmailAndPassword(email, password);
     }
-    if (user) {
-        navigate(from, {replace: true});
-    }
+    if(user){
+        navigate('/checkout');
+    }    
     return (
         <div className='w-50 mx-auto'>
             <h2 className='text-primary mt-2 text-center'>Please Login!</h2>
