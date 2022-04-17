@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-
-const Wedding = ({wedding}) => {
-    const {img} = wedding;
+const Event = ({event}) => {
+    const {img} = event;
     return (
         <div className='col-12 col-md-6 col-lg-4'>
             <Card  style={{ width: '18rem' }}>
@@ -14,4 +13,4 @@ const Wedding = ({wedding}) => {
     );
 };
 
-export default Wedding;
+export default Event;

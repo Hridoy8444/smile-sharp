@@ -49,19 +49,15 @@ const Login = () => {
             <Form onSubmit={handleToSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
+                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
+                    
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                
                 <Button style={{width:  '100%', padding: '10px'}} variant="primary" type="submit">
                     Login
                 </Button>
