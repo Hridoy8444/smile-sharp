@@ -1,9 +1,15 @@
 .social-media-container{
     border:  1px solid #95A0A7;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: center;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 20px;
     cursor: pointer;
     
+}
+.input-field{
+    border-radius: 20px;
+}
+.field-color{
+    background-color: #3cb371;
 }

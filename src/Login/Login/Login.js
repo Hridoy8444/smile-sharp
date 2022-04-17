@@ -45,20 +45,20 @@ const Login = () => {
     }    
     return (
         <div className='w-50 mx-auto'>
-            <h2 className='text-primary mt-2 text-center'>Please Login!</h2>
+            <h2 className='text-success mt-2 text-center'>Please Login!</h2>
             <Form onSubmit={handleToSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
+                    <Form.Control className='input-field' onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
                     
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
+                    <Form.Control className='input-field' onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
                 
-                <Button style={{width:  '100%', padding: '10px'}} variant="primary" type="submit">
+                <Button className='input-field field-color' style={{width:  '100%', padding: '10px'}} variant="primary" type="submit">
                     Login
                 </Button>
             </Form>

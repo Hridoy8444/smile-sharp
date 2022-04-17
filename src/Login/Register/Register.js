@@ -60,29 +60,29 @@ const Register = () => {
         <div>
 
             <div className='w-50 mx-auto'>
-                <h2 className='text-primary mt-2 text-center'>Please Register!</h2>
+                <h2 className='text-success mt-2 text-center'>Please Register!</h2>
                 <Form onSubmit={handleToSubmit} >
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" name='name' placeholder="name " required />
+                        <Form.Control className='input-field' type="text" name='name' placeholder="name " required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control onBlur={handleEmailBlur} type="email" name='email' placeholder="Enter email" required/>
+                        <Form.Control className='input-field' onBlur={handleEmailBlur} type="email" name='email' placeholder="Enter email" required/>
                         
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control onBlur={handlePasswordBlur} type="password" name='password' placeholder="Password"required/>
+                        <Form.Control className='input-field' onBlur={handlePasswordBlur} type="password" name='password' placeholder="Password"required/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control onBlur={handleConfirmPasswordBlur} type="password" name='confirmPassword' placeholder="confirmPassword" required/>
+                        <Form.Label>Confirm Password</Form.Label>
+                        <Form.Control className='input-field' onBlur={handleConfirmPasswordBlur} type="password" name='confirmPassword' placeholder="confirmPassword" required/>
                     </Form.Group>
 
                     <p style={{color: 'red'}}>{error}</p>
-                    <Button style={{width:  '100%', padding: '10px'}} variant="primary" type="Register">
+                    <Button className='input-field field-color' style={{width:  '100%', padding: '10px'}} variant="primary" type="Register">
                         Register
                     </Button>
                 </Form>
