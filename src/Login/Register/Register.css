@@ -1,0 +1,9 @@
+.social-media-container{
+    border:  1px solid #95A0A7;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    
+}

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import './Register.css';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import googleLogo from '../../../src/Images/Logo/googleLogo.png';
+import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
+
 
 const Register = () => {
     
@@ -16,9 +20,10 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
         
     ] = useCreateUserWithEmailAndPassword(auth);
+    const [signInWithGoogle] = useSignInWithGoogle(auth)
+    const [signInWithFacebook] = useSignInWithFacebook(auth);
 
     const [sendEmailVerification] = useSendEmailVerification(auth);
 
@@ -53,7 +58,7 @@ const Register = () => {
         <div>
 
             <div className='w-50 mx-auto'>
-                <h2 className='text-primary mt-2'>Please Register!</h2>
+                <h2 className='text-primary mt-2 text-center'>Please Register!</h2>
                 <Form onSubmit={handleToSubmit} >
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Your Name</Form.Label>
@@ -77,11 +82,15 @@ const Register = () => {
                     </Form.Group>
 
                     <p style={{color: 'red'}}>{error}</p>
-                    <Button variant="primary" type="Register">
+                    <Button style={{width:  '100%', padding: '10px'}} variant="primary" type="Register">
                         Register
                     </Button>
                 </Form>
                 <p>Already have an account? <Link to={'/login'} className='text-primary text-decoration-none' onClick={navigateToLogin}>Please Login</Link></p>
+                <div>
+                    <p onClick={() => signInWithGoogle()} className='social-media-container'><img  height={32} src={googleLogo} alt="" /> <small>Continue With Google</small></p>
+                    <p onClick={() => signInWithFacebook()} className='social-media-container'><img height={32} src={facebookLogo} alt="" /> <small>Continue With Google</small></p>
+                </div>
             </div>
         </div>
     );

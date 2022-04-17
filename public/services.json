@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Wedding PhotoGraphy",
+        "price": 499,
+        "img": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "description": "Wedding photography is the photography of activities relating to weddings. It encompasses photographs of the couple before marriage as well as coverage of the wedding and reception. It is a major commercial endeavor that supports the bulk of the efforts for many photography studios or independent photographers."
+    },
+    {
+        "id": 2,
+        "name": "Event Photography",
+        "price": 449,
+        "img": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "description": "Event photography is the professional art of snapping high-quality images during a wide variety of important occasions, from personal events like weddings or birthday parties to large public gatherings like corporate events, galas, award ceremonies, and music festivals."
+    },
+    {
+        "id": 3,
+        "name": "Seminar PhotoGraphy",
+        "price": 333,
+        "img": "https://images.unsplash.com/photo-1558008258-3256797b43f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+        "description": "Photographer’s Seminar is a workshop series designed to expand intermediate and advanced photographer’s visual capabilities. This portfolio building workshop will challenge participants to move beyond the traditional snap-shot. Over the course of the workshops, participants will learn to create a series of photos that work together, creating more meaning both for themselves and their audience."
+
+    },
+    {
+        "id": 4,
+        "name": "Travel Photography",
+        "price": 599,
+        "img": "https://images.unsplash.com/photo-1465778893808-9b3d1b443be4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80",
+        "description": "Travel photography differs from other subcategories of photography. It is a genre that has few limitations to its image qualifiers, but will also test the photographer to great lengths due to the abundance of challenges faced. Within the travel photography genre, one can expect to see a vast range of images aimed to capture anything from the combination of landscapes, portrait, street, culture, food, underwater scenes and more."
+
+    }
+]
