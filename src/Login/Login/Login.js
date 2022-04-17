@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googleLogo from '../../../src/Images/Logo/googleLogo.png';
 import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
@@ -21,7 +21,8 @@ const Login = () => {
     const [signInWithGoogle] = useSignInWithGoogle(auth)
     const [signInWithFacebook] = useSignInWithFacebook(auth);
 
-
+    const location = useLocation()
+    const from = location.state?.from?.pathname  || '/';
 
 
     const handleEmailBlur = event => {
@@ -40,7 +41,7 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
     if (user) {
-        navigate('/');
+        navigate(from, {replace: true});
     }
     return (
         <div className='w-50 mx-auto'>

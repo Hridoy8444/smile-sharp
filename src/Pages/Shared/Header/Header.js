@@ -35,6 +35,7 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
+                            <Nav.Link as={Link} to="/checkout">CheckOut</Nav.Link>
                             <Nav.Link as={Link} to="/about">about</Nav.Link>
                             {
                                 user ?
