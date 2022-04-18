@@ -1,10 +1,14 @@
-.footer-container{
-    background-color: rgba(0, 0, 255, 0.774);
+.footer-container {
+    background-color: blue;
     margin-top: 20px;
+    width: 100%;
+    
 }
-.logo-container p{
+
+.logo-container p {
     text-decoration: underline;
 }
+
 .logo-container a img {
     padding-left: 10px;
     padding-bottom: 10px;

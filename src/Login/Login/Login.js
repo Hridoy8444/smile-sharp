@@ -7,10 +7,11 @@ import googleLogo from '../../../src/Images/Logo/googleLogo.png';
 import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
 
 const Login = () => {
-    const [authUser, loading, error] = useAuthState(auth);
+    const [authUser, loading, ] = useAuthState(auth);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const navigate = useNavigate();
 
@@ -42,6 +43,9 @@ const Login = () => {
     }
     const handleToSubmit = event => {
         event.preventDefault();
+        if(!authUser){
+            setError('Email & Password are not match')
+        }
 
         signInWithEmailAndPassword(email, password);
     }
@@ -69,7 +73,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control className='input-field' onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
-
+                <p style={{color: 'red'}}>{error}</p>
                 <Button className='input-field field-color' style={{ width: '100%', padding: '10px' }} variant="primary" type="submit">
                     Login
                 </Button>

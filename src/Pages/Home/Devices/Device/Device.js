@@ -6,7 +6,7 @@ const Device = ({ device }) => {
     return (
         <div className='col-12 col-md-6 col-lg-4'>
             <Card style={{ width: '18rem' }}>
-                <Card.Img style={{ width: '260px', height: '230px' }} variant="top" src={img} />
+                <Card.Img className='mx-auto w-100 ' style={{ width: '260px', height: '230px' }} variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                 </Card.Body>

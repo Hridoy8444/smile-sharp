@@ -31,7 +31,7 @@ const CheckOut = () => {
     }
     return (
         <div>
-            <h2>Your Check Out Is complete</h2>
+            <h2 className='text-primary text-center'>Please Complete your Check out</h2>
             <div className='w-50 mx-auto'>
                 <Form onSubmit={handleCheckOut} >
                     <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -55,7 +55,7 @@ const CheckOut = () => {
 
                     {/* <p style={{ color: 'red' }}>{error}</p> */}
                     <Button className='input-field field-color' style={{ width: '100%', padding: '10px' }} variant="primary" type="Register">
-                        Register
+                        Check Out
                     </Button>
                 </Form>
             </div>

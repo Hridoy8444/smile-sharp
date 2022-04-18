@@ -12,7 +12,7 @@ const Footer = () => {
 
     const today = new Date();
     return (
-        <div className='footer-container text-light text-center'>
+        <div  className='footer-container text-light text-center'>
             <span>
                 © {today.getFullYear()} Smile Sharp Photography
             </span>

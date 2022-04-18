@@ -11,7 +11,7 @@ const Devices = () => {
     }, []);
     return (
         <div>
-            <h2 className='text-primary text-center mt-4 mb-4 '>Photographic Equipment</h2>
+            <h2  className='text-primary text-center mt-4 mb-4 '>Photographic Equipment</h2>
             <div className='row container mx-auto ms-4'>
                 {
                     devices.map(device => <Device

@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Register.css';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import googleLogo from '../../../src/Images/Logo/googleLogo.png';
 import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
 
 
 const Register = () => {
-    
+
+    const [authUser, loading, ] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     
     const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
 
     const [
         createUserWithEmailAndPassword,
@@ -38,8 +41,8 @@ const Register = () => {
     const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value);
     }
-    if(user){
-        navigate('/checkout');
+    if (authUser) {
+        navigate(from, { replace: true });
     }
     const handleToSubmit = event => {
         event.preventDefault();
@@ -47,10 +50,12 @@ const Register = () => {
             setError('Your Password are not match');
             return;
         }
+        if(password.length < 6){
+            setError('Your password is short');
+            return;
+        }
         
         createUserWithEmailAndPassword(email, password);
-        
-        
          alert('send email')
     }
     const navigateToLogin = () => {
