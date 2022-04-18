@@ -10,6 +10,7 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import Album from './Pages/Album/Album/Album';
 import SuccessFull from './Pages/CheckOut/SuccessFull';
 import Blogs from './Pages/Blogs/Blogs';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

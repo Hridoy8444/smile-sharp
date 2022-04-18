@@ -1,0 +1,12 @@
+.footer-container{
+    background-color: rgba(0, 0, 255, 0.774);
+    margin-top: 20px;
+}
+.logo-container p{
+    text-decoration: underline;
+}
+.logo-container a img {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height: 40px;
+}
