@@ -1,4 +1,8 @@
-.nav-container img {
+.nav-container{
+    background-color: #628584;
+}
+.nav-container-img img {
     border-radius: 30px;
-    height: 30px;
+    height: 50px;
+    width: 40px;
 }
