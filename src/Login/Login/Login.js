@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Form, Toast } from 'react-bootstrap';
+import { Button, Form,   } from 'react-bootstrap';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googleLogo from '../../../src/Images/Logo/googleLogo.png';
-
-import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const Login = () => {
@@ -79,12 +79,15 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
-            <p className='text-center mt-2'>Forget Password? <Link to={"/register"} className='text-primary text-decoration-none' onClick={resetPassword}>Reset Password</Link></p>
+            
+            <p className='text-center mt-2'>Forget Password? <button to={"/register"} className='text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
+            <ToastContainer></ToastContainer>
             <p>New to Smile Sharp Photography? <Link to={'/register'} className='text-primary text-decoration-none' onClick={navigateToRegister}>Please Register</Link></p>
             <div>
                 <p onClick={() => signInWithGoogle()} className='social-media-container'><img height={32} src={googleLogo} alt="" /> <small>Continue With Google</small></p>
                
             </div>
+           
         </div>
     );
 };
