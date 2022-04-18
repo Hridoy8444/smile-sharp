@@ -1,0 +1,13 @@
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    
+    
+    
+}
+.goal-container{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
