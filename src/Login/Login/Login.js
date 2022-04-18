@@ -4,7 +4,7 @@ import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword,
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googleLogo from '../../../src/Images/Logo/googleLogo.png';
-import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
+
 import { toast } from 'react-toastify';
 
 
@@ -24,7 +24,7 @@ const Login = () => {
 
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle] = useSignInWithGoogle(auth)
-    const [signInWithFacebook] = useSignInWithFacebook(auth);
+    
 
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
@@ -83,7 +83,7 @@ const Login = () => {
             <p>New to Smile Sharp Photography? <Link to={'/register'} className='text-primary text-decoration-none' onClick={navigateToRegister}>Please Register</Link></p>
             <div>
                 <p onClick={() => signInWithGoogle()} className='social-media-container'><img height={32} src={googleLogo} alt="" /> <small>Continue With Google</small></p>
-                <p onClick={() => signInWithFacebook()} className='social-media-container'><img height={32} src={facebookLogo} alt="" /> <small>Continue With Google</small></p>
+               
             </div>
         </div>
     );

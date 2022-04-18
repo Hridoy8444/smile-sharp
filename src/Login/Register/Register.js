@@ -5,7 +5,7 @@ import './Register.css';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import googleLogo from '../../../src/Images/Logo/googleLogo.png';
-import facebookLogo from '../../../src/Images/Logo/facebookLogo.png';
+
 
 
 const Register = () => {
@@ -26,7 +26,7 @@ const Register = () => {
         
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [signInWithGoogle] = useSignInWithGoogle(auth)
-    const [signInWithFacebook] = useSignInWithFacebook(auth);
+    
 
     
 
@@ -94,7 +94,7 @@ const Register = () => {
                 <p>Already have an account? <Link to={'/login'} className='text-primary text-decoration-none' onClick={navigateToLogin}>Please Login</Link></p>
                 <div>
                     <p onClick={() => signInWithGoogle()} className='social-media-container'><img  height={32} src={googleLogo} alt="" /> <small>Continue With Google</small></p>
-                    <p onClick={() => signInWithFacebook()} className='social-media-container'><img height={32} src={facebookLogo} alt="" /> <small>Continue With Google</small></p>
+                    
                 </div>
             </div>
         </div>
