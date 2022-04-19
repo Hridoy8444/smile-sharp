@@ -5,7 +5,7 @@ import './About.css';
 const About = () => {
     return (
         <div style={{ minHeight: "70vh" }} className='about-container'>
-            <div >
+            <div className='img-container'>
                 <img height={400} src={about} alt="" />
             </div>
             <div >
