@@ -14,7 +14,7 @@ const Weddings = () => {
     return (
         <div id='weddings'>
             <h2 className='text-primary text-center'>Wedding Photo</h2>
-            <div className='row mx-auto gy-3   '>
+            <div className='row container mx-auto ms-4' >
                 {
                     weddings.map(wedding => <Wedding
                     key={wedding.id}

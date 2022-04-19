@@ -12,7 +12,7 @@ const Events = () => {
     return (
         <div id='events'>
             <h2 className='text-primary text-center mt-3 mb-3'>Events Photo</h2>
-            <div className="row mx-auto gy-3  ">
+            <div className='row container mx-auto ms-4'>
                 {
                     events.map(event => <Event
                     key={event.id}
