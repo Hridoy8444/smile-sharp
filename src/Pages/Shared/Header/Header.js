@@ -33,9 +33,7 @@ const Header = () => {
                             <NavDropdown title="Album" as={Link} to="/album"  id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="album#weddings">Wedding</NavDropdown.Item>
                                 <NavDropdown.Item href="album#events">Events</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                
                             </NavDropdown>
                         </Nav>
                         <Nav>

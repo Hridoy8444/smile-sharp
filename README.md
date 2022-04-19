@@ -9,12 +9,11 @@
 * Protected Route
 * Services
 * Autherization and Authentication
-* Google Sign In and Github Sign In
+* Google Sign In 
 
 ### Technologies Used:
 * React Router
 * Firebase
 * React-bootstrap
 * Bootstrap
-* React-icons
 * Tostify
