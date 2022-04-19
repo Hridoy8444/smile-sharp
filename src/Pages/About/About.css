@@ -1,13 +1,13 @@
-.about-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.about-container {
+    display: inline-flex;
+    gap: 100px;
+    margin-right: 50px;
 
-    
-    
-    
 }
-.goal-container{
+
+.goal-container {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 5px;
+    margin-top: 50px;
+    padding: 20px;
 }
